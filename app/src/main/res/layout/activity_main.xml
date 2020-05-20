@@ -50,13 +50,43 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/textTimeCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:text="00:00"
+        app:layout_constraintBottom_toTopOf="@+id/btnPrevious"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/textTimeTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="00:00"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintStart_toEndOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="42dp"
+        android:progress="0"
+        android:progressTint="#434343"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvArtist" />
+
     <Button
         android:id="@+id/btnPrevious"
         android:layout_width="63dp"
         android:layout_height="55dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:background="@drawable/previous"
         app:layout_constraintEnd_toStartOf="@+id/btnPlay"
         app:layout_constraintTop_toBottomOf="@+id/tvArtist" />
@@ -66,21 +96,20 @@
         android:layout_width="63dp"
         android:layout_height="55dp"
         android:layout_marginTop="52dp"
-        android:layout_marginBottom="172dp"
         android:background='@drawable/play'
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvArtist"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.395" />
 
     <Button
         android:id="@+id/btnNext"
         android:layout_width="63dp"
         android:layout_height="55dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="120dp"
         android:background='@drawable/next'
         app:layout_constraintStart_toEndOf="@+id/btnPlay"
         app:layout_constraintTop_toBottomOf="@+id/tvArtist" />
